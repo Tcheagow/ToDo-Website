@@ -6,7 +6,7 @@ import { ContainerMain } from './DivMainStyles';
 export default function DivMain(props){
     return(
         <ContainerMain>
-            <Header light={props.light}/>
+            <Header light={props.light} setLight={props.setLight}/>
         </ContainerMain>
     );
 }

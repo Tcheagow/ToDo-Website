@@ -16,7 +16,7 @@ export default function Header(props){
     return(
         <DivHeader>
             <h1>T O D O</h1>
-            <>{icon()}</>
+            <div onClick={() => props.setLight(!props.light)}>{icon()}</div>
         </DivHeader>
     );
 }

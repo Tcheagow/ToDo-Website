@@ -36,7 +36,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={light?lightTheme:darkTheme}>
-      <Container light={light}/>
+      <Container light={light} setLight={setLight}/>
       <GlobalStyle image={image}/>
     </ThemeProvider>
   );

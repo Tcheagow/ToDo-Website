@@ -11,6 +11,13 @@ export default createGlobalStyle`
         
         background-image: url(${(props) => props.image});
         background-repeat: no-repeat;
+
+        color: ${(props) => props.theme.color.text};
     }
-    
+    .iconSun{
+        fill: ${(props) => props.theme.color.text};
+    }
+    .iconMoon{
+        fill: ${(props) => props.theme.color.text};
+    }
 `;
