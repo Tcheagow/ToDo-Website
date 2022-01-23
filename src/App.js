@@ -9,6 +9,8 @@ import Container from './components/container/Container';
 
 import ImageLightPc from './components/images/bg-desktop-light.jpg';
 import ImageDarkPc from './components/images/bg-desktop-dark.jpg';
+import ImageLightMobile from './components/images/bg-mobile-light.jpg';
+import ImageDarkMobile from './components/images/bg-mobile-dark.jpg';
 
 const theme = window.matchMedia('(prefers-color-scheme: light)').matches;
 
@@ -23,12 +25,18 @@ export default function App() {
       }else{
         setImage(ImageDarkPc);
       }
+    }else{
+      if(light === true){
+        setImage(ImageLightMobile);
+      }else{
+        setImage(ImageDarkMobile);
+      }
     }
   }, [light]);
 
   return (
     <ThemeProvider theme={light?lightTheme:darkTheme}>
-      <Container/>
+      <Container light={light}/>
       <GlobalStyle image={image}/>
     </ThemeProvider>
   );

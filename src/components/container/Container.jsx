@@ -1,10 +1,12 @@
 import React from "react";
-import ImagePcDarK from '../images/bg-desktop-dark.jpg';
+import DivMain from "../divMain/DivMain";
 
-export default function Container(){
+import { DivContainer } from './ContainerStyles';
+
+export default function Container(props){
     return(
-        <div className="container">
-            
-        </div>
+        <DivContainer className="background">
+            <DivMain light={props.light}/>
+        </DivContainer>
     );
 }
