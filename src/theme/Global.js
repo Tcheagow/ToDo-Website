@@ -1,8 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
-    body{
+    *{
         margin: 0;
+        padding: 0;
+        outline: 0;
+        box-sizing: border-box;
     }
     .background{
         margin: 0;
@@ -19,5 +22,8 @@ export default createGlobalStyle`
     }
     .iconMoon{
         fill: ${(props) => props.theme.color.text};
+    }
+    .test{
+        background-color: ${(props) => props.theme.color.background};
     }
 `;
