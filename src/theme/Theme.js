@@ -9,10 +9,10 @@ export const darkTheme = {
 }
 export const lightTheme = {
     color: {
-        background: '#fafafa',
+        background: '#e4e4f4',
         text: '#2B3442',
-        colorInput: '#e4e5f1',
-        backgroundDivInMain: "#e4e5f1",
+        colorInput: '#fcfcfc',
+        backgroundDivInMain: "#fcfcfc",
         colorBorderButton: "#d2d3db"
     }
 }
