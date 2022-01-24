@@ -17,6 +17,8 @@ const theme = window.matchMedia('(prefers-color-scheme: light)').matches;
 export default function App() {
   const [light, setLight] = useState(theme);
   const [image, setImage] = useState("");
+  
+  const [toDo, setToDo] = useState("");
 
   useEffect(() => {
     if( window.screen.width > 375){
@@ -36,7 +38,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={light?lightTheme:darkTheme}>
-      <Container light={light} setLight={setLight}/>
+      <Container light={light} setLight={setLight} toDo={toDo} setToDo={setToDo}/>
       <GlobalStyle image={image}/>
     </ThemeProvider>
   );

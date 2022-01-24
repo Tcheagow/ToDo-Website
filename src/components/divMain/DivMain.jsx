@@ -8,7 +8,7 @@ export default function DivMain(props){
     return(
         <ContainerMain>
             <Header light={props.light} setLight={props.setLight}/>
-            <DivCreateToDo />
+            <DivCreateToDo toDo={props.toDo} setToDo={props.setToDo} />
         </ContainerMain>
     );
 }
