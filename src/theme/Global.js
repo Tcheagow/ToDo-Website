@@ -33,7 +33,8 @@ export default createGlobalStyle`
     .toDoInput{
         background-color: ${(props) => props.theme.color.colorInput};
     }
-    .toDoInput input{
+    .toDoInput input, .toDoInput input::placeholder{
         background-color: ${(props) => props.theme.color.colorInput};
+        color: ${(props) => props.theme.color.text};
     }
 `;

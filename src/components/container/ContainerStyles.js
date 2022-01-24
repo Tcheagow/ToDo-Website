@@ -6,6 +6,6 @@ export const DivContainer = styled.div`
 
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 `;

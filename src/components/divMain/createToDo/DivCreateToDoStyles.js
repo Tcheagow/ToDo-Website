@@ -7,9 +7,11 @@ export const ContainerCreateToDo = styled.div`
     align-items: center;
 
     width: auto;
-    height: 5vh;
+    height: 10vh;
 
     margin-top: 20px;
+
+    border-radius: 0 10px 0 10px;
 `;
 
 export const Forms = styled.form`
