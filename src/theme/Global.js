@@ -23,11 +23,12 @@ export default createGlobalStyle`
     .iconMoon{
         fill: ${(props) => props.theme.color.text};
     }
-    .button{
-        background-color: ${(props) => props.theme.color.background};
-    }
     .divCreateToDo{
         background-color: ${(props) => props.theme.color.colorInput};
+    }
+    .button{
+        background-color: ${(props) => props.theme.color.colorInput};
+        border-color:  ${(props) => props.theme.color.colorBorderButton};
     }
     .toDoInput{
         background-color: ${(props) => props.theme.color.colorInput};
