@@ -4,6 +4,7 @@ export const DivHeader = styled.div`
     display: flex;
 
     width: auto;
+    height: 5vh;
 
     justify-content: space-between;
 

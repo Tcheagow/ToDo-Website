@@ -9,7 +9,7 @@ export default function DivCreateToDo(props){
     }
 
     return(
-        <ContainerCreateToDo className="divCreateToDo" onSubmit={NewToDo}>
+        <ContainerCreateToDo className="backColor" onSubmit={NewToDo}>
             <Forms className='toDoInput'>
                 <Button/>
                 <Input className='inputSearch' value={props.toDo} type="text" placeholder='Create a new To Do'
