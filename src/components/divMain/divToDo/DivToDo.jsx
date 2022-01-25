@@ -4,11 +4,24 @@ import { ContainerToDo } from './DivToDoStyles';
 
 export default function DivCreateToDo(props){
     function addToDoInList() {
-        if(localStorage.getItem("todo1") !== null){
-            return <p>{localStorage.getItem("todo1")}</p>;
-        }else{
-            return <p></p>
+        let toDoArray = [];
+
+        for(let i = 0; i < 10; i++){
+            let toDoInLocalStorage = "toDo" + i;
+
+            if(localStorage.getItem(toDoInLocalStorage) !== null){
+                toDoArray[i] = localStorage.getItem(toDoInLocalStorage);
+            }else{
+                i = 10;
+            }
         }
+
+        const toDoList = toDoArray.map(
+            (toDo) => 
+                <p>{toDo}</p>
+        );
+
+        return toDoList;
     }
 
     return(
