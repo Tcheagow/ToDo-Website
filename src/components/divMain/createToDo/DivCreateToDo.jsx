@@ -6,6 +6,18 @@ import { ContainerCreateToDo, Forms, Input } from './DivCreateToDoStyles';
 export default function DivCreateToDo(props){
     function NewToDo(e){
         e.preventDefault();
+
+        if(props.toDo !== ""){
+            for(let i = 0; i < 10; i++){
+                const positionLocalStorage = "toDo" + i;
+
+                if(localStorage.getItem(positionLocalStorage) === null){
+                    localStorage.setItem(positionLocalStorage, props.toDo);
+                    i = 10;
+                }
+            }
+        }
+        props.setToDo("");
     }
 
     return(

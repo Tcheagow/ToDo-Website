@@ -10,7 +10,7 @@ export default function DivMain(props){
         <ContainerMain>
             <Header light={props.light} setLight={props.setLight}/>
             <DivCreateToDo toDo={props.toDo} setToDo={props.setToDo} />
-            <DivToDo />
+            <DivToDo toDo={props.toDo} setToDo={props.setToDo}/>
         </ContainerMain>
     );
 }
