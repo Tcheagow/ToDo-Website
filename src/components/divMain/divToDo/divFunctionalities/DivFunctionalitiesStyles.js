@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ContainerFunctionalities = styled.div`
-    height: 10vh;
-    width: calc(30vw - 40px);
+    height: 7vh;
+    width: calc(35vw - 40px);
 
     display: flex;
     flex-direction: row;

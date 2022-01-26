@@ -7,6 +7,10 @@ export default createGlobalStyle`
         outline: 0;
         box-sizing: border-box;
     }
+    body{
+        background-color: ${(props) => props.theme.color.background};
+        overflow-x: hidden;
+    }
     .background{
         margin: 0;
 
@@ -36,5 +40,8 @@ export default createGlobalStyle`
     .toDoInput input, .toDoInput input::placeholder{
         background-color: ${(props) => props.theme.color.colorInput};
         color: ${(props) => props.theme.color.text};
+    }
+    .borderDivTodo{
+        border-bottom:  ${(props) => props.theme.color.borderDivToDo};
     }
 `;

@@ -1,7 +1,7 @@
 import React from "react";
 import DivFunctionalities from "./divFunctionalities/DivFunctionalities";
 
-import { ContainerToDo } from './DivToDoStyles';
+import { ContainerToDo, ContainerToDoList } from './DivToDoStyles';
 
 export default function DivCreateToDo(props){
     function addToDoInList() {
@@ -19,7 +19,9 @@ export default function DivCreateToDo(props){
 
         const toDoList = toDoArray.map(
             (toDo) => 
-                <p>{toDo}</p>
+                <ContainerToDoList className="borderDivTodo">
+                    <p>{toDo}</p>
+                </ContainerToDoList>
         );
 
         return toDoList;
@@ -27,8 +29,8 @@ export default function DivCreateToDo(props){
 
     return(
         <ContainerToDo className="backColor">
-            <DivFunctionalities/>
             {addToDoInList()}
+            <DivFunctionalities/>
         </ContainerToDo>
     );
 }
