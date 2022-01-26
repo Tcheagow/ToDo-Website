@@ -14,6 +14,15 @@ export default function DivCreateToDo(props){
                 if(localStorage.getItem(positionLocalStorage) === null){
                     localStorage.setItem(positionLocalStorage, props.toDo);
                     i = 10;
+
+                    if(localStorage.getItem("contador") !== null){
+                        const contToDo = parseInt(localStorage.getItem("contador"));
+                        const valueConstToDo = contToDo + 1;
+                        
+                        localStorage.setItem("contador", valueConstToDo.toString())
+                    }else{
+                        localStorage.setItem("contador", "1");
+                    }
                 }
             }
         }
