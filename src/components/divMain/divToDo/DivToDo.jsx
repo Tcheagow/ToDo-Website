@@ -1,4 +1,5 @@
 import React from "react";
+import DivFunctionalities from "./divFunctionalities/DivFunctionalities";
 
 import { ContainerToDo } from './DivToDoStyles';
 
@@ -26,6 +27,7 @@ export default function DivCreateToDo(props){
 
     return(
         <ContainerToDo className="backColor">
+            <DivFunctionalities/>
             {addToDoInList()}
         </ContainerToDo>
     );

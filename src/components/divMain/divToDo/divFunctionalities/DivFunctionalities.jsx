@@ -1,12 +1,15 @@
 import React from "react";
+import DivOptionShowToDo from "./showToDo/DivOptionShowToDo";
 
 import { ContainerFunctionalities } from './DivFunctionalitiesStyles';
 
-export default function DivCreateToDo(){
+export default function DivFunctionalities(){
   
     return(
-        <ContainerFunctionalities className="backColor">
-            
+        <ContainerFunctionalities>
+            <p>itens left</p>
+            <DivOptionShowToDo/>
+            <p>Clear Completed</p>
         </ContainerFunctionalities>
     );
 }

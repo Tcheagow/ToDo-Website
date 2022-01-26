@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContainerToDo = styled.div`
-
+    width: auto;
     height: 10vh;
     max-height: calc(70vh - 15vh - 40px);
 
