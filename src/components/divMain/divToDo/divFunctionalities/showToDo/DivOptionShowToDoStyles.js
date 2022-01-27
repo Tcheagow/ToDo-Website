@@ -7,4 +7,8 @@ export const ContainerOptionShowToDo = styled.div`
     justify-content: space-between;
 
     width: 12vw;
+
+    p{
+        cursor: pointer;
+    }
 `;

@@ -4,7 +4,7 @@ import { ContainerOptionShowToDo } from './DivOptionShowToDoStyles';
 
 export default function DivOptionShowToDo(){
     const [color, setColor] = useState("all");
-    
+
     const colors = {
         colorAll: () => {
             if(color === "all"){
@@ -28,12 +28,21 @@ export default function DivOptionShowToDo(){
             }
         }
     }
-console.log(colors.colorAll())
+
     return(
         <ContainerOptionShowToDo>
-            <p style={colors.colorAll() ? {color:"blue"} : null}>All</p>
-            <p style={colors.colorActive() ? {color:"blue"} : null}>Active</p>
-            <p style={colors.colorCompleted() ? {color:"blue"} : null}>Completed</p>
+            <p style={colors.colorAll() ? {color:"blue"} : null}
+                onClick={() => setColor("all")}
+            >All
+            </p>
+            <p style={colors.colorActive() ? {color:"blue"} : null}
+                onClick={() => setColor("active")}
+             >Active
+             </p>
+            <p style={colors.colorCompleted() ? {color:"blue"} : null}
+                onClick={() => setColor("completed")}
+             >Completed
+             </p>
         </ContainerOptionShowToDo>
     );
 }
