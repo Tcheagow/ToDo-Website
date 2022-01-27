@@ -1,36 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import DivFunctionalities from "./divFunctionalities/DivFunctionalities";
+import DivToDoAll from "./Containers/DivToDoAll";
 
-import { ContainerToDo, ContainerToDoList } from './DivToDoStyles';
+import { ContainerToDo} from './DivToDoStyles';
 
 export default function DivCreateToDo(props){
-    function addToDoInList() {
-        let toDoArray = [];
+    const [divToDo, setDivToDo] = useState("all");
 
-        for(let i = 0; i < 10; i++){
-            let toDoInLocalStorage = "toDo" + i;
-
-            if(localStorage.getItem(toDoInLocalStorage) !== null){
-                toDoArray[i] = localStorage.getItem(toDoInLocalStorage);
-            }else{
-                i = 10;
-            }
+    const showDivToDo = () => {
+        if(divToDo === "all"){
+            return <DivToDoAll/>
+        }else if(divToDo === "active"){
+            return <></>
+        }else{
+            return <p>Ola</p>
         }
-
-        const toDoList = toDoArray.map(
-            (toDo) => 
-                <ContainerToDoList className="borderDivTodo">
-                    <p>{toDo}</p>
-                </ContainerToDoList>
-        );
-
-        return toDoList;
     }
 
     return(
         <ContainerToDo className="backColor">
-            {addToDoInList()}
-            <DivFunctionalities/>
+            {showDivToDo()}
+            <DivFunctionalities divToDo={divToDo} setDivToDo={setDivToDo}/>
         </ContainerToDo>
     );
 }

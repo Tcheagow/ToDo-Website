@@ -3,7 +3,7 @@ import DivOptionShowToDo from "./showToDo/DivOptionShowToDo";
 
 import { ContainerFunctionalities } from './DivFunctionalitiesStyles';
 
-export default function DivFunctionalities(){
+export default function DivFunctionalities(props){
     const numberToDo =() => {
         if(isNaN(parseInt(localStorage.getItem("contador")))){
             return 0
@@ -15,7 +15,7 @@ export default function DivFunctionalities(){
     return(
         <ContainerFunctionalities>
             <p>{numberToDo()} itens left</p>
-            <DivOptionShowToDo/>
+            <DivOptionShowToDo divToDo={props.divToDo} setDivToDo={props.setDivToDo}/>
             <p>Clear Completed</p>
         </ContainerFunctionalities>
     );

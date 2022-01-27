@@ -1,27 +1,25 @@
-import React, {useState} from "react";
+import React from "react";
 
 import { ContainerOptionShowToDo } from './DivOptionShowToDoStyles';
 
-export default function DivOptionShowToDo(){
-    const [color, setColor] = useState("all");
-
+export default function DivOptionShowToDo(props){
     const colors = {
         colorAll: () => {
-            if(color === "all"){
+            if(props.divToDo === "all"){
                 return true;
             }else{ 
                 return false;
             }
         },
         colorActive: () => {
-            if(color === "active"){
+            if(props.divToDo === "active"){
                 return true;
             }else{ 
                 return false;
             }
         },
         colorCompleted: () => {
-            if(color === "completed"){
+            if(props.divToDo === "completed"){
                 return true;
             }else{ 
                 return false;
@@ -32,15 +30,15 @@ export default function DivOptionShowToDo(){
     return(
         <ContainerOptionShowToDo>
             <p style={colors.colorAll() ? {color:"blue"} : null}
-                onClick={() => setColor("all")}
+                onClick={() => props.setDivToDo("all")}
             >All
             </p>
             <p style={colors.colorActive() ? {color:"blue"} : null}
-                onClick={() => setColor("active")}
+                onClick={() => props.setDivToDo("active")}
              >Active
              </p>
             <p style={colors.colorCompleted() ? {color:"blue"} : null}
-                onClick={() => setColor("completed")}
+                onClick={() => props.setDivToDo("completed")}
              >Completed
              </p>
         </ContainerOptionShowToDo>
