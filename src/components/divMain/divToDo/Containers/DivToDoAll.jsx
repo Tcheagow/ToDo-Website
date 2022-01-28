@@ -1,7 +1,7 @@
 import React from "react";
 
 
-import { ContainerToDoList } from './DivToDoStyles';
+import { ContainerToDoList, DivCheckboxAndSpan } from './DivToDoStyles';
 
 export default function DivToDoAll(props){
     function addToDoInList() {
@@ -20,7 +20,13 @@ export default function DivToDoAll(props){
         const toDoList = toDoArray.map(
             (toDo, i) => 
                 <ContainerToDoList className="borderDivTodo" key={i}>
-                    <p>{toDo} - {i}</p>
+                    <div>
+                        <DivCheckboxAndSpan>
+                            <input type="checkbox" className="borderCheckBox"/>
+                            <span className="colorAndBorderCheckbox"></span>
+                        </DivCheckboxAndSpan>
+                        <p>{toDo} - {i}</p>
+                    </div>
                 </ContainerToDoList>
         );
 

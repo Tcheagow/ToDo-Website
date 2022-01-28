@@ -44,4 +44,8 @@ export default createGlobalStyle`
     .borderDivTodo{
         border-bottom:  ${(props) => props.theme.color.borderDivToDo};
     }
+    .colorAndBorderCheckbox{
+        background-color: ${(props) => props.theme.color.backgroundDivInMain};
+        border: 1.5px solid ${(props) => props.theme.color.colorBorderButton};
+    }
 `;
