@@ -7,6 +7,4 @@ export const Buttonstyle = styled.button`
     border-radius: 50px;
     border:solid;
     border-width: 1.5px;
-
-    margin-left: 10px;
 `;

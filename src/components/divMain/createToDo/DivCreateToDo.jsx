@@ -12,7 +12,10 @@ export default function DivCreateToDo(props){
                 const positionLocalStorage = "toDo" + i;
 
                 if(localStorage.getItem(positionLocalStorage) === null){
-                    localStorage.setItem(positionLocalStorage, props.toDo);
+                    const todo = props.toDo;
+                    localStorage.setItem(positionLocalStorage, todo);
+                    localStorage.setItem(i, "false");
+                    
                     props.setUpdateToDo(!props.updateToDo)
                     i = 10;
 

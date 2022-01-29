@@ -9,7 +9,7 @@ export default function DivCreateToDo(props){
 
     const showDivToDo = () => {
         if(divToDo === "all"){
-            return <DivToDoAll updateToDo={props.updateToDo}/>
+            return <DivToDoAll updateToDo={props.updateToDo} setUpdateToDo={props.setUpdateToDo}/>
         }else if(divToDo === "active"){
             return <></>
         }else{

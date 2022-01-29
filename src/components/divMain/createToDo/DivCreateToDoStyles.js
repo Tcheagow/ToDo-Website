@@ -15,13 +15,17 @@ export const ContainerCreateToDo = styled.div`
 `;
 
 export const Forms = styled.form`
+    width: calc(35vw - 40px);
     
+    margin-left: 20px;
 `;
 
 export const Input = styled.input`
-    width: calc(30vw - 40px);
+    width: calc(35vw - 80px);
 
-    margin-left: 10px;
+    margin-left: 20px;
 
     border: 0;
+
+    transform: translateY(-20%);
 `;

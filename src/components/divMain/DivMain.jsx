@@ -14,8 +14,7 @@ export default function DivMain(props){
             <DivCreateToDo toDo={props.toDo} setToDo={props.setToDo} 
                 updateToDo={updateToDo} setUpdateToDo={setUpdateToDo}
             />
-            <DivToDo toDo={props.toDo} setToDo={props.setToDo}
-                updateToDo={updateToDo} setUpdateToDo={setUpdateToDo}
+            <DivToDo updateToDo={updateToDo} setUpdateToDo={setUpdateToDo}
             />
         </ContainerMain>
     );
