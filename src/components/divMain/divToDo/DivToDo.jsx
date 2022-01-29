@@ -9,7 +9,7 @@ export default function DivCreateToDo(props){
 
     const showDivToDo = () => {
         if(divToDo === "all"){
-            return <DivToDoAll/>
+            return <DivToDoAll updateToDo={props.updateToDo}/>
         }else if(divToDo === "active"){
             return <></>
         }else{
@@ -20,7 +20,9 @@ export default function DivCreateToDo(props){
     return(
         <ContainerToDo className="backColor">
             {showDivToDo()}
-            <DivFunctionalities divToDo={divToDo} setDivToDo={setDivToDo}/>
+            <DivFunctionalities divToDo={divToDo} setDivToDo={setDivToDo} 
+                updateToDo={props.updateToDo} setUpdateToDo={props.setUpdateToDo}
+            />
         </ContainerToDo>
     );
 }

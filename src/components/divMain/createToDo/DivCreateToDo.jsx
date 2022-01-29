@@ -13,6 +13,7 @@ export default function DivCreateToDo(props){
 
                 if(localStorage.getItem(positionLocalStorage) === null){
                     localStorage.setItem(positionLocalStorage, props.toDo);
+                    props.setUpdateToDo(!props.updateToDo)
                     i = 10;
 
                     if(localStorage.getItem("contador") !== null){

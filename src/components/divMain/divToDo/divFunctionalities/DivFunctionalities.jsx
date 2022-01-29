@@ -16,7 +16,9 @@ export default function DivFunctionalities(props){
         <ContainerFunctionalities>
             <p>{numberToDo()} itens left</p>
             <DivOptionShowToDo divToDo={props.divToDo} setDivToDo={props.setDivToDo}/>
-            <p>Clear Completed</p>
+            <p onClick={ () => 
+                props.setUpdateToDo(!props.updateToDo)
+            }>Clear Completed</p>
         </ContainerFunctionalities>
     );
 }

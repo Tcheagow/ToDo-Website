@@ -7,6 +7,7 @@
 + JavaScript
 + React.js
 + Styled-Components
++ LocalStorage
 
 #
 

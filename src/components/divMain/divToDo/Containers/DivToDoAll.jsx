@@ -1,39 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 
 import { ContainerToDoList, DivCheckboxAndSpan } from './DivToDoStyles';
 
 export default function DivToDoAll(props){
-    function addToDoInList() {
-        let toDoArray = [];
+   const [toDoAll, setToDoAll] = useState("");
 
-        for(let i = 0; i < 10; i++){
-            let toDoInLocalStorage = "toDo" + i;
-
-            if(localStorage.getItem(toDoInLocalStorage) !== null){
-                toDoArray[i] = localStorage.getItem(toDoInLocalStorage);
-            }else{
-                i = 10;
+    useEffect( () => {
+        function addToDoInList() {
+            let toDoArray = [];
+    
+            for(let i = 0; i < 10; i++){
+                let toDoInLocalStorage = "toDo" + i;
+    
+                if(localStorage.getItem(toDoInLocalStorage) !== null){
+                    toDoArray[i] = localStorage.getItem(toDoInLocalStorage);
+                }else{
+                    i = 10;
+                }
             }
+            return toDoArray;
         }
-
-        const toDoList = toDoArray.map(
-            (toDo, i) => 
-                <ContainerToDoList className="borderDivTodo" key={i}>
+        const toDoList = addToDoInList().map(
+            (toDo, index) => 
+                <ContainerToDoList className="borderDivTodo" key={index}>
                     <div>
                         <DivCheckboxAndSpan>
                             <input type="checkbox" className="borderCheckBox"/>
                             <span className="colorAndBorderCheckbox"></span>
                         </DivCheckboxAndSpan>
-                        <p>{toDo} - {i}</p>
+                        <p>{toDo}</p>
                     </div>
                 </ContainerToDoList>
-        );
-
-        return toDoList;
-    }
+        ); 
+        setToDoAll(toDoList);
+    }, [props.updateToDo])
 
     return(
-        <>{addToDoInList()}</>
+        <>{toDoAll}</>
     );
 }
