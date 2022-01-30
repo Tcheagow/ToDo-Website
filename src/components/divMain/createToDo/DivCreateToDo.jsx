@@ -8,7 +8,7 @@ export default function DivCreateToDo(props){
         e.preventDefault();
 
         if(props.toDo !== ""){
-            for(let i = 0; i < 10; i++){
+            for(let i = 0; i < 50; i++){
                 const positionLocalStorage = "toDo" + i;
 
                 if(localStorage.getItem(positionLocalStorage) === null){
@@ -17,7 +17,7 @@ export default function DivCreateToDo(props){
                     localStorage.setItem(i, "false");
                     
                     props.setUpdateToDo(!props.updateToDo)
-                    i = 10;
+                    i = 50;
 
                     if(localStorage.getItem("contador") !== null){
                         const contToDo = parseInt(localStorage.getItem("contador"));

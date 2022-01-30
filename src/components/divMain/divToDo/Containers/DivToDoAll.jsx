@@ -7,7 +7,7 @@ export default function DivToDoAll(props){
     const [toDoAll, setToDoAll] = useState("");
 
     function toDoChecked(todo){    
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < 50; i++){
             let toDoInLocalStorage = "toDo" + i;
 
             if(todo === localStorage.getItem(toDoInLocalStorage)) {
@@ -21,7 +21,7 @@ export default function DivToDoAll(props){
     }
 
     function changeChecked(todo){
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < 50; i++){
             let toDoInLocalStorage = "toDo" + i;
 
             if(todo === localStorage.getItem(toDoInLocalStorage)) {
@@ -46,7 +46,7 @@ export default function DivToDoAll(props){
     }
 
     function dashedToDo(todo){
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < 50; i++){
             let toDoInLocalStorage = "toDo" + i;
 
             if(todo === localStorage.getItem(toDoInLocalStorage)) {
@@ -63,7 +63,7 @@ export default function DivToDoAll(props){
         function addToDoInList() {
             let toDoArray = [];
     
-            for(let i = 0; i < 10; i++){
+            for(let i = 0; i < 50; i++){
                 let toDoInLocalStorage = "toDo" + i;
     
                 if(localStorage.getItem(toDoInLocalStorage) !== null){

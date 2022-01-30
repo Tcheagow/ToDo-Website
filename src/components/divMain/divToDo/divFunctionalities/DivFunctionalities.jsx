@@ -13,7 +13,7 @@ export default function DivFunctionalities(props){
     } 
 
     function ClearToDo(){    
-        for(let i = 0; i < 10; i++){
+        for(let i = 0; i < 50; i++){
             let toDoInLocalStorage = "toDo" + i;
 
             if(localStorage.getItem(i) === "true"){
