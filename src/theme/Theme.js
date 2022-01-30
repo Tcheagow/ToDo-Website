@@ -6,6 +6,7 @@ export const darkTheme = {
         backgroundDivInMain: "#24243c",
         colorBorderButton: "#777a92",
         borderDivToDo: "2px solid #777a92",
+        colorDashedToDo: "#777a92"
     }
 }
 export const lightTheme = {
@@ -15,6 +16,7 @@ export const lightTheme = {
         colorInput: '#fcfcfc',
         backgroundDivInMain: "#fcfcfc",
         colorBorderButton: "#d2d3db",
-        borderDivToDo: "2px solid #d2d3db"
+        borderDivToDo: "2px solid #d2d3db",
+        colorDashedToDo: "#d2d3db"
     }
 }

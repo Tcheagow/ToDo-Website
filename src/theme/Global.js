@@ -48,4 +48,7 @@ export default createGlobalStyle`
         background-color: ${(props) => props.theme.color.backgroundDivInMain};
         border: 1.5px solid ${(props) => props.theme.color.colorBorderButton};
     }
+    .dashedTodo{
+        color: ${(props) => props.theme.color.colorDashedToDo};
+    }
 `;

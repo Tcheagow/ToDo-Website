@@ -10,7 +10,7 @@ export default function DivToDoAll(props){
         for(let i = 0; i < 10; i++){
             let toDoInLocalStorage = "toDo" + i;
 
-            if(localStorage.getItem(toDoInLocalStorage) !== null && todo === localStorage.getItem(toDoInLocalStorage).split("|")[0]) {
+            if(todo === localStorage.getItem(toDoInLocalStorage)) {
                if(localStorage.getItem(i) === "false"){
                     return false;
                }else{
@@ -19,17 +19,32 @@ export default function DivToDoAll(props){
             }
         }
     }
+
     function changeChecked(todo){
         for(let i = 0; i < 10; i++){
             let toDoInLocalStorage = "toDo" + i;
 
-            if(localStorage.getItem(toDoInLocalStorage) !== null && todo === localStorage.getItem(toDoInLocalStorage)) {
+            if(todo === localStorage.getItem(toDoInLocalStorage)) {
                if(localStorage.getItem(i) === "false"){
                     localStorage.setItem(i, "true");
                }else{
                     localStorage.setItem(i, "false");
                }
                props.setUpdateToDo(!props.updateToDo);
+            }
+        }
+    }
+
+    function dashedToDo(todo){
+        for(let i = 0; i < 10; i++){
+            let toDoInLocalStorage = "toDo" + i;
+
+            if(todo === localStorage.getItem(toDoInLocalStorage)) {
+               if(localStorage.getItem(i) === "false"){
+                    return todo
+               }else{
+                    return <s className="dashedTodo">{todo}</s>
+               }
             }
         }
     }
@@ -57,7 +72,7 @@ export default function DivToDoAll(props){
                             />
                             <span className="colorAndBorderCheckbox"></span>
                         </DivCheckboxAndSpan>
-                        <p>{toDo}</p>
+                        <p>{dashedToDo(toDo)}</p>
                     </div>
                 </ContainerToDoList>
         ); 
