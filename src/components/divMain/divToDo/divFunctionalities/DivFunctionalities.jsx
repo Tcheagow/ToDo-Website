@@ -20,11 +20,6 @@ export default function DivFunctionalities(props){
                 localStorage.removeItem(toDoInLocalStorage);
                 localStorage.removeItem(i);
 
-                const contToDo = parseInt(localStorage.getItem("contador"));
-                const valueConstToDo = contToDo - 1;
-                
-                localStorage.setItem("contador", valueConstToDo.toString())
-
                 props.setUpdateToDo(!props.updateToDo)
             }
         }
