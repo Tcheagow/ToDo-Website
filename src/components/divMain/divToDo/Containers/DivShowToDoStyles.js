@@ -39,7 +39,9 @@ export const DivCheckboxAndSpan =  styled.label`
     }
 
     input:checked + span {
-        background-color: #c03;
+        background: url(${(props) => props.checkicon}), linear-gradient(to right,hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
 `

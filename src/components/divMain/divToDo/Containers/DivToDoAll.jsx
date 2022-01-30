@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import CheckIcon from '../../../images/icon-check.svg';
 
 import { ContainerToDoList, DivCheckboxAndSpan } from './DivShowToDoStyles';
 
@@ -51,7 +51,7 @@ export default function DivToDoAll(props){
             (toDo, index) => 
                 <ContainerToDoList className="borderDivTodo" key={index}>
                     <div>
-                        <DivCheckboxAndSpan>
+                        <DivCheckboxAndSpan checkicon={CheckIcon}>
                             <input type="checkbox" className="borderCheckBox" checked={toDoChecked(toDo)}
                                 onChange={()=>changeChecked(toDo)}
                             />
