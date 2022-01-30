@@ -52,7 +52,6 @@ export default function DivToDoAll(props){
 
             if(localStorage.getItem(toDoInLocalStorage) === todo){
                 localStorage.removeItem(toDoInLocalStorage);
-                localStorage.removeItem(i);
 
                 if(localStorage.getItem(i) === "false"){
                     const contToDo = parseInt(localStorage.getItem("contador"));
@@ -61,6 +60,8 @@ export default function DivToDoAll(props){
                     localStorage.setItem("contador", valueConstToDo.toString());
                 }
                 
+                localStorage.removeItem(i);
+
                 props.setUpdateToDo(!props.updateToDo);
             }
         }
