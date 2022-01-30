@@ -10,8 +10,10 @@ export const ContainerToDoList = styled.div`
 
     align-items: center;
 
+    overflow-x: hidden;
+
     div{
-        width: calc(35vw - 40px);
+        width: calc(40vw - 40px);
         margin-left: 20px;
 
         display: flex;
@@ -19,6 +21,10 @@ export const ContainerToDoList = styled.div`
 
         align-items: center;
         justify-content: flex-start;
+
+        @media(max-width: 1000px) {
+            width: calc(60vw - 40px);
+        }
     }
 `;
 

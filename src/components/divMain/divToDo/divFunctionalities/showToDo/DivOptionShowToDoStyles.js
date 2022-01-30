@@ -6,9 +6,13 @@ export const ContainerOptionShowToDo = styled.div`
     
     justify-content: space-between;
 
-    width: 12vw;
+    width: 15vw;
 
     p{
         cursor: pointer;
+    }
+    
+    @media(max-width: 1000px) {
+        width: 25vw;
     }
 `;

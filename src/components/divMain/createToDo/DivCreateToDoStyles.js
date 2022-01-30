@@ -15,17 +15,26 @@ export const ContainerCreateToDo = styled.div`
 `;
 
 export const Forms = styled.form`
-    width: calc(35vw - 40px);
+    width: calc(40vw - 40px);
     
     margin-left: 20px;
+
+    
+    @media(max-width: 1000px) {
+        width: calc(60vw - 40px);
+    }
 `;
 
 export const Input = styled.input`
-    width: calc(35vw - 80px);
+    width: calc(40vw - 80px);
 
     margin-left: 20px;
 
     border: 0;
 
     transform: translateY(-20%);
+
+    @media(max-width: 1000px) {
+        width: calc(60vw - 80px);
+    }
 `;
