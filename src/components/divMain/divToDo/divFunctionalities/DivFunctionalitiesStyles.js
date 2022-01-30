@@ -19,4 +19,7 @@ export const ContainerFunctionalities = styled.div`
     @media(max-width: 1000px) {
         width: calc(60vw - 40px);
     }
+    @media(max-width: 700px) {
+        width: calc(80vw - 40px);
+    }
 `;

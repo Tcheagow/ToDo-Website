@@ -23,6 +23,9 @@ export const Forms = styled.form`
     @media(max-width: 1000px) {
         width: calc(60vw - 40px);
     }
+    @media(max-width: 700px) {
+        width: calc(80vw - 40px);
+    }
 `;
 
 export const Input = styled.input`
@@ -36,5 +39,8 @@ export const Input = styled.input`
 
     @media(max-width: 1000px) {
         width: calc(60vw - 80px);
+    }
+    @media(max-width: 700px) {
+        width: calc(80vw - 80px);
     }
 `;

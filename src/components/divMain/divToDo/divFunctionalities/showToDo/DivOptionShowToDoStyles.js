@@ -15,4 +15,7 @@ export const ContainerOptionShowToDo = styled.div`
     @media(max-width: 1000px) {
         width: 25vw;
     }
+    @media(max-width: 700px) {
+        width: 30vw;
+    }
 `;
