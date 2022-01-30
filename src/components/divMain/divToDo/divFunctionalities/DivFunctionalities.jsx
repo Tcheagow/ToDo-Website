@@ -4,7 +4,7 @@ import DivOptionShowToDo from "./showToDo/DivOptionShowToDo";
 import { ContainerFunctionalities } from './DivFunctionalitiesStyles';
 
 export default function DivFunctionalities(props){
-    const numberToDo =() => {
+    const numberToDo = () => {
         if(isNaN(parseInt(localStorage.getItem("contador")))){
             return 0
         }else{
@@ -25,11 +25,28 @@ export default function DivFunctionalities(props){
         }
     }
 
+    function renderFunctionalities() {
+        if(window.screen.width > 500){
+            console.log("io")
+            return (
+                <>
+                    <p>{numberToDo()} itens left</p>
+                    <DivOptionShowToDo divToDo={props.divToDo} setDivToDo={props.setDivToDo}/>
+                    <p onClick={ClearToDo}>Clear Completed</p>
+                </>
+            );
+        }else{
+            return(
+                <>
+                    <p>{numberToDo()} itens left</p>
+                    <p onClick={ClearToDo}>Clear Completed</p>
+                </>
+            );
+        }
+    }
     return(
         <ContainerFunctionalities>
-            <p>{numberToDo()} itens left</p>
-            <DivOptionShowToDo divToDo={props.divToDo} setDivToDo={props.setDivToDo}/>
-            <p onClick={ClearToDo}>Clear Completed</p>
+            {renderFunctionalities()}
         </ContainerFunctionalities>
     );
 }

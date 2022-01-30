@@ -16,3 +16,17 @@ export const ContainerMain = styled.div`
         width: 80vw;
     }
 `;
+
+export const ContainerFunctionalities = styled.div`
+    height: 7vh;
+    width: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 20px;
+
+    border-radius: 10px 0 10px 0;
+`;
