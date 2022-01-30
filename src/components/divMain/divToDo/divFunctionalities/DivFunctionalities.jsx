@@ -27,7 +27,6 @@ export default function DivFunctionalities(props){
 
     function renderFunctionalities() {
         if(window.screen.width > 500){
-            console.log("io")
             return (
                 <>
                     <p>{numberToDo()} itens left</p>

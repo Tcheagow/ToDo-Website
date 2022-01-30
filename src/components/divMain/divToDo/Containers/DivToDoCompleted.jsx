@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CheckIcon from '../../../images/icon-check.svg';
+import CrossIcon from '../../../images/icon-cross.svg';
 
-import { ContainerToDoList, DivCheckboxAndSpan } from './DivShowToDoStyles';
+import { ContainerToDoList, DivCheckboxAndSpan, ContainerInputAndToDoAndSvg, DivToDoAndImage } from './DivShowToDoStyles';
 
 export default function DivToDoCompleted(props){
     const [toDoCompleted, setToDoCompleted] = useState("");
@@ -45,6 +46,24 @@ export default function DivToDoCompleted(props){
         }
     }
 
+    function deleteToDo(todo){
+        for(let i = 0; i < 50; i++){
+            let toDoInLocalStorage = "toDo" + i;
+
+            if(localStorage.getItem(toDoInLocalStorage) === todo){
+                localStorage.removeItem(toDoInLocalStorage);
+                localStorage.removeItem(i);
+
+                const contToDo = parseInt(localStorage.getItem("contador"));
+                const valueConstToDo = contToDo - 1;
+                
+                localStorage.setItem("contador", valueConstToDo.toString());
+                
+                props.setUpdateToDo(!props.updateToDo);
+            }
+        }
+    }
+
     function dashedToDo(todo){
         for(let i = 0; i < 50; i++){
             let toDoInLocalStorage = "toDo" + i;
@@ -75,15 +94,20 @@ export default function DivToDoCompleted(props){
         const toDoList = addToDoInList().map(
             (toDo, index) => 
                 <ContainerToDoList className="borderDivTodo" key={index}>
-                    <div>
+                    <ContainerInputAndToDoAndSvg>
                         <DivCheckboxAndSpan checkicon={CheckIcon}>
                             <input type="checkbox" className="borderCheckBox" checked={toDoChecked(toDo)}
                                 onChange={()=>changeChecked(toDo)}
                             />
                             <span className="colorAndBorderCheckbox"></span>
                         </DivCheckboxAndSpan>
-                        <p>{dashedToDo(toDo)}</p>
-                    </div>
+                        <DivToDoAndImage>
+                            <p>{dashedToDo(toDo)}</p>
+                            <div onClick={() => deleteToDo(toDo)}>
+                                <img src={CrossIcon} alt="svg X" />
+                            </div>
+                        </DivToDoAndImage>
+                    </ContainerInputAndToDoAndSvg>
                 </ContainerToDoList>
         ); 
         setToDoCompleted(toDoList);

@@ -11,23 +11,23 @@ export const ContainerToDoList = styled.div`
     align-items: center;
 
     overflow-x: hidden;
+`;
 
-    div{
-        width: calc(40vw - 40px);
-        margin-left: 20px;
+export const ContainerInputAndToDoAndSvg = styled.div`
+    width: calc(40vw - 40px);
+    margin-left: 20px;
 
-        display: flex;
-        flex-direction: row;
+    display: flex;
+    flex-direction: row;
 
-        align-items: center;
-        justify-content: flex-start;
+    align-items: center;
+    justify-content: flex-start;
 
-        @media(max-width: 1000px) {
-            width: calc(60vw - 40px);
-        }
-        @media(max-width: 700px) {
-            width: calc(80vw - 40px);
-        }
+    @media(max-width: 1000px) {
+        width: calc(60vw - 40px);
+    }
+    @media(max-width: 700px) {
+        width: calc(80vw - 40px);
     }
 `;
 
@@ -52,5 +52,20 @@ export const DivCheckboxAndSpan =  styled.label`
         background-repeat: no-repeat;
         background-position: center;
     }
+`;
 
-`
+export const DivToDoAndImage = styled.div`
+    width: calc(40vw - 80px );
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    @media(max-width: 1000px) {
+        width: calc(60vw - 80px);
+    }
+    @media(max-width: 700px) {
+        width: calc(80vw - 80px);
+    }
+`;
