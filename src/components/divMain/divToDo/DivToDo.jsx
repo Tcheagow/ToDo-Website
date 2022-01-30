@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DivFunctionalities from "./divFunctionalities/DivFunctionalities";
 import DivToDoAll from "./Containers/DivToDoAll";
 import DivToDoActive from "./Containers/DivToDoActive";
+import DivToDoCompleted from "./Containers/DivToDoCompleted";
 
 import { ContainerToDo} from './DivToDoStyles';
 
@@ -14,7 +15,7 @@ export default function DivCreateToDo(props){
         }else if(divToDo === "active"){
             return <DivToDoActive updateToDo={props.updateToDo} setUpdateToDo={props.setUpdateToDo}/>
         }else{
-            return <p>Ola</p>
+            return <DivToDoCompleted updateToDo={props.updateToDo} setUpdateToDo={props.setUpdateToDo}/>
         }
     }
 
