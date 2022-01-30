@@ -1,6 +1,12 @@
 # ToDo Website
 
+<h1 align="center">
+    <img src="./ReadmeGif/operation.gif" alt="Gif Operation"/>
+</h1>
+
 <br>
+
+##
 
 ## Technologies:
 + HTML
@@ -23,6 +29,8 @@
 
 <br>
 
-<h2 align="center"> 
-    ⚠️ Not finished ⚠️
-</h2>
+><h2 align="center"> Application link:</h2>
+
+<br>
+
+<a target="_blank"><p align="center">https://to-do-list-69f43.firebaseapp.com/</p><a>
