@@ -12,13 +12,29 @@ export default function DivFunctionalities(props){
         }
     } 
 
+    function ClearToDo(){    
+        for(let i = 0; i < 10; i++){
+            let toDoInLocalStorage = "toDo" + i;
+
+            if(localStorage.getItem(i) === "true"){
+                localStorage.removeItem(toDoInLocalStorage);
+                localStorage.removeItem(i);
+
+                const contToDo = parseInt(localStorage.getItem("contador"));
+                const valueConstToDo = contToDo - 1;
+                
+                localStorage.setItem("contador", valueConstToDo.toString())
+
+                props.setUpdateToDo(!props.updateToDo)
+            }
+        }
+    }
+
     return(
         <ContainerFunctionalities>
             <p>{numberToDo()} itens left</p>
             <DivOptionShowToDo divToDo={props.divToDo} setDivToDo={props.setDivToDo}/>
-            <p onClick={ () => 
-                props.setUpdateToDo(!props.updateToDo)
-            }>Clear Completed</p>
+            <p onClick={ClearToDo}>Clear Completed</p>
         </ContainerFunctionalities>
     );
 }
