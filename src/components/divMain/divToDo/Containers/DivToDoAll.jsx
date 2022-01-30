@@ -58,7 +58,6 @@ export default function DivToDoAll(props){
                 const valueConstToDo = contToDo - 1;
                 
                 localStorage.setItem("contador", valueConstToDo.toString());
-                
                 props.setUpdateToDo(!props.updateToDo);
             }
         }
@@ -96,7 +95,7 @@ export default function DivToDoAll(props){
                 <ContainerToDoList className="borderDivTodo" key={index}>
                     <ContainerInputAndToDoAndSvg>
                         <DivCheckboxAndSpan checkicon={CheckIcon}>
-                            <input type="checkbox" className="borderCheckBox" checked={toDoChecked(toDo)}
+                            <input type="checkbox" checked={toDoChecked(toDo)}
                                 onChange={()=>changeChecked(toDo)}
                             />
                             <span className="colorAndBorderCheckbox"></span>

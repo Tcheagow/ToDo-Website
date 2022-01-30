@@ -62,6 +62,9 @@ export const DivToDoAndImage = styled.div`
 
     justify-content: space-between;
 
+    p{
+        transform: translateY(10%);
+    }
     @media(max-width: 1000px) {
         width: calc(60vw - 80px);
     }

@@ -5,6 +5,4 @@ export const Buttonstyle = styled.button`
     height: 20px;
 
     border-radius: 50px;
-    border:solid;
-    border-width: 1.5px;
 `;

@@ -31,8 +31,8 @@ export default createGlobalStyle`
         background-color: ${(props) => props.theme.color.backgroundDivInMain};
     }
     .button{
-        background-color: ${(props) => props.theme.color.colorInput};
-        border-color:  ${(props) => props.theme.color.colorBorderButton};
+        background-color: ${(props) => props.theme.color.backgroundDivInMain};
+        border: 1.5px solid ${(props) => props.theme.color.colorBorderButton};
     }
     .toDoInput{
         background-color: ${(props) => props.theme.color.colorInput};
