@@ -18,7 +18,8 @@ export default createGlobalStyle`
         
         background-image: url(${(props) => props.image});
         background-repeat: no-repeat;
-
+        background-size: cover;
+        
         color: ${(props) => props.theme.color.text};
     }
     .iconSun{
