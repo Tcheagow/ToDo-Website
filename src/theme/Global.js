@@ -1,5 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
+var desktop_backgroundImage_size = () => {
+    return  '100% ' + 300 + 'px'
+}
+var mobile_backgroundImage_size = () => {
+    return '100% ' + 200 + 'px'
+}
+
 export default createGlobalStyle`
     *{
         margin: 0;
@@ -18,7 +25,7 @@ export default createGlobalStyle`
         
         background-image: url(${(props) => props.image});
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: ${(props) => props.image.includes('bg-desktop')?desktop_backgroundImage_size():mobile_backgroundImage_size()};
         
         color: ${(props) => props.theme.color.text};
     }
