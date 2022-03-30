@@ -1,9 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
-var desktop_backgroundImage_size = () => {
+const desktop_backgroundImage_size = () => {
     return  '100% ' + 300 + 'px'
 }
-var mobile_backgroundImage_size = () => {
+const mobile_backgroundImage_size = () => {
     return '100% ' + 200 + 'px'
 }
 
